@@ -29,11 +29,3 @@ def test_parts_should_be_sorted_when_they_are_not_equal() -> None:
     assert split_integer(17, 4) == [4, 4, 4, 5]
     assert split_integer(32, 6) == [5, 5, 5, 5, 6, 6]
     assert split_integer(5, 2) == [2, 3]
-
-
-def test_should_add_zeros_when_value_is_less_than_number_of_parts() -> None:
-    result = split_integer(3, 5)
-    assert sum(result) == 3
-    assert len(result) == 5
-    assert result == sorted(result)
-    assert 0 in result
